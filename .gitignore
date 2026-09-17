@@ -2,6 +2,14 @@
 .vs/
 bin/
 bin-int/
+**/x64/
+**/Debug/
+**/Release/
 
 #Files 
 *.user
+*.suo
+*.VC.db
+*.opendb
+*.pdb
+*.ilk
