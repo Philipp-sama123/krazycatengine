@@ -25,15 +25,16 @@ project "KrazyCatEngine"
         "%{prj.name}/src/**.cpp"
     }
 
-    include
+    includedirs
     {
-        "%{prj.name}/vendor/spdlog/include"
+        "KrazyCatEngine/vendor/spdlog/include"
     }
 
     filter "system:windows"
-        cppdialect "C++22"
+        cppdialect "C++20"
         staticruntime "On"
         systemversion "latest"
+        buildoptions { "/utf-8" }
 
     defines
     {
@@ -43,7 +44,7 @@ project "KrazyCatEngine"
 
     postbuildcommands
     {
-        ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+        "{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"
     }
 
     filter "configurations:Debug"
@@ -72,9 +73,9 @@ project "Sandbox"
         "%{prj.name}/src/**.cpp"
     }
 
-    include
+    includedirs
     {
-        "%{prj.name}/vendor/spdlog/include",
+        "KrazyCatEngine/vendor/spdlog/include",
         "KrazyCatEngine/src",
     }
 
@@ -84,14 +85,14 @@ project "Sandbox"
     }
 
     filter "system:windows"
-        cppdialect "C++22"
+        cppdialect "C++20"
         staticruntime "On"
         systemversion "latest"
+        buildoptions { "/utf-8" }
 
     defines
     {
-        "KCE_PLATFORM_WINDOWS",
-        "KCE_BUILD_DLL"
+        "KCE_PLATFORM_WINDOWS"
     }
 
     filter "configurations:Debug"

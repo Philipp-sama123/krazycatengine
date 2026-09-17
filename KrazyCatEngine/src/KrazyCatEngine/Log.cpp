@@ -2,10 +2,20 @@
 
 #include "spdlog/sinks/stdout_color_sinks.h"
 
-namespace Engine
+namespace KrazyCatEngine
 {
     std::shared_ptr<spdlog::logger> Log::s_coreLogger;
     std::shared_ptr<spdlog::logger> Log::s_clientLogger;
+
+    std::shared_ptr<spdlog::logger>& Log::GetCoreLogger()
+    {
+        return s_coreLogger;
+    }
+
+    std::shared_ptr<spdlog::logger>& Log::GetClientLogger()
+    {
+        return s_clientLogger;
+    }
 
     void Log::Init()
     {

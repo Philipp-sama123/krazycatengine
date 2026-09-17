@@ -4,7 +4,7 @@
 #include <iostream>
 
 
-namespace Engine
+namespace KrazyCatEngine
 {
     class KRAZYCATENGINE_API Application
     {

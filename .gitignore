@@ -1,5 +1,7 @@
 #Directories
 .vs/
+.idea/
+.vscode/
 bin/
 bin-int/
 **/x64/
@@ -13,3 +15,6 @@ bin-int/
 *.opendb
 *.pdb
 *.ilk
+*.sln
+*.vcxproj
+*.vcxproj.filters

@@ -7,5 +7,5 @@
         #define KRAZYCATENGINE_API __declspec(dllimport)
     #endif
 #else
-    #error Krazycatengine only supports windows platform!
+    #error KrazyCatEngine only supports the Windows platform!
 #endif
