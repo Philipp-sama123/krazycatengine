@@ -1,6 +1,6 @@
 ﻿#include <KrazyCatEngine.h>
 
-class Sandbox : public KrazyCatEngine::Application
+class Sandbox : public Engine::Application
 {
 public: 
     Sandbox() {
@@ -11,7 +11,7 @@ public:
         
     }
 };
-KrazyCatEngine::Application* KrazyCatEngine::CreateApplication()
+Engine::Application* Engine::CreateApplication()
 {
     return new Sandbox();
 }

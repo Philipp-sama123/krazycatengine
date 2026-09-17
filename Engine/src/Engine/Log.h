@@ -1,0 +1,34 @@
+﻿#pragma once
+#include <memory>
+
+#include "Core.h"
+#include "spdlog/spdlog.h"
+
+namespace Engine
+{
+    class KRAZYCATENGINE_API Log
+    {
+    public:
+        static void Init();
+
+        inline static std::shared_ptr<spdlog::logger> GetCoreLogger() { return s_coreLogger; }
+        inline static std::shared_ptr<spdlog::logger> GetClientLogger() { return s_clientLogger; }
+
+    private:
+        static std::shared_ptr<spdlog::logger> s_coreLogger;
+        static std::shared_ptr<spdlog::logger> s_clientLogger;
+    };
+}
+// Core Log Macros
+#define KCE_CORE_FATAL(...)     ::Engine::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define KCE_CORE_ERROR(...)     ::Engine::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define KCE_CORE_WARN(...)      ::Engine::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define KCE_CORE_INFO(...)      ::Engine::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define KCE_CORE_TRACE(...)     ::Engine::Log::GetCoreLogger()->trace(__VA_ARGS__)
+
+// Client Log Macros
+#define KCE_CLIENT_FATAL(...)     ::Engine::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define KCE_CLIENT_ERROR(...)     ::Engine::Log::GetClientLogger()->error(__VA_ARGS__)
+#define KCE_CLIENT_WARN(...)      ::Engine::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define KCE_CLIENT_INFO(...)      ::Engine::Log::GetClientLogger()->info(__VA_ARGS__)
+#define KCE_CLIENT_TRACE(...)     ::Engine::Log::GetClientLogger()->trace(__VA_ARGS__)

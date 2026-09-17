@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace KrazyCatEngine
+namespace Engine
 {
     Application::Application()
     {
