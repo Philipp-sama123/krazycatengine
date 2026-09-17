@@ -2,8 +2,8 @@
 
 // to be used by KrazyCatEngine applications
 
-#include "KrazyCatEngine/Core.h"
 #include "KrazyCatEngine/Application.h"
+#include "KrazyCatEngine/Log.h"
 
 // ----- Entry Point -----
 

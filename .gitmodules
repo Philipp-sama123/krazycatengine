@@ -1,0 +1,3 @@
+[submodule "krazycatengine/vendor/spdlog"]
+	path = krazycatengine/vendor/spdlog
+	url = https://github.com/gabime/spdlog

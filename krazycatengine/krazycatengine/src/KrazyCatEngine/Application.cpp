@@ -16,7 +16,7 @@ namespace KrazyCatEngine
     {
         std::string name;
         std::cout << "Gimme your name: " << '\n';
-        std::cin >> name;
+        std::cin >> name; 
         std::cout << "KrazyCatEngine is Running for you " + name << '\n';
     }
 }
