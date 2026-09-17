@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.37301.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{AE79B519-73BA-42DF-BA4A-9C06820B2137}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "krazycatengine", "krazycatengine\krazycatengine.vcxproj", "{7044488D-3AA3-4904-990A-712D2B02CAEB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "krazycatengine", "krazycatengine.vcxproj", "{7044488D-3AA3-4904-990A-712D2B02CAEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

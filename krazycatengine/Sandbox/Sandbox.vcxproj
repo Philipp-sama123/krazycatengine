@@ -55,7 +55,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(SolutionDir)krazycatengine\src;$(SolutionDir)vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,7 +80,7 @@
     <ClCompile Include="src\SandboxApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\krazycatengine\krazycatengine.vcxproj">
+    <ProjectReference Include="..\krazycatengine.vcxproj">
       <Project>{7044488d-3aa3-4904-990a-712d2b02caeb}</Project>
       <Name>krazycatengine</Name>
     </ProjectReference>
