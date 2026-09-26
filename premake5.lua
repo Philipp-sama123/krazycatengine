@@ -89,8 +89,8 @@ project "Sandbox"
 
     includedirs
     {
-        "KrazyCatEngine/vendor/spdlog/include",
-        "KrazyCatEngine/src",
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/spdlog/include"
     }
 
     links

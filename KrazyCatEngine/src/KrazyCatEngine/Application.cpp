@@ -1,6 +1,8 @@
 ﻿#include "Application.h"
 
 #include <string>
+#include "Events/ApplicationEvent.h"
+#include "Log.h"
 
 namespace KrazyCatEngine
 {
@@ -14,9 +16,15 @@ namespace KrazyCatEngine
 
     void Application::Run()
     {
-        std::string name;
-        std::cout << "Gimme your name: " << '\n';
-        std::cin >> name; 
-        std::cout << "KrazyCatEngine is Running for you " + name << '\n';
+        WindowResizeEvent e(1500, 720);
+        if (e.IsInCategory(EventCategoryApplication))
+        {
+            KCE_CORE_TRACE(e.ToString());
+        }
+        if (e.IsInCategory(EventCategoryInput))
+        {
+            KCE_CORE_TRACE(e.ToString());
+        }
+        while (true);
     }
 }

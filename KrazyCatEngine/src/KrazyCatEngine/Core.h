@@ -11,3 +11,5 @@
 #else
     #error KrazyCatEngine only supports Windows and macOS!
 #endif
+
+#define BIT(x) (1 << x)

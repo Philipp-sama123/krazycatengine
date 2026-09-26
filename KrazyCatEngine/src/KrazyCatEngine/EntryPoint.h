@@ -9,11 +9,9 @@ extern KrazyCatEngine::Application* KrazyCatEngine::CreateApplication();
 int main(int argc, char** argv)
 {
     KrazyCatEngine::Log::Init();
-    KCE_CORE_WARN("Initialized Core Logger");
-    KCE_CLIENT_INFO("Hello Client");
-    KCE_CORE_ERROR("Core ERROR");
-    
-    std::cout << "KrazyCatEngine is Starting" << std::endl;
+    KCE_CORE_WARN("[EntryPoint] main Initialized Core Logger");
+    KCE_CLIENT_INFO("[EntryPoint] main Hello Client");
+    KCE_CORE_ERROR("[EntryPoint] main Core ERROR");
     
     auto app = KrazyCatEngine::CreateApplication();
     app->Run();

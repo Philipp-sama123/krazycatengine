@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include <iostream>
+#include "Events/Event.h"
 
 
 namespace KrazyCatEngine
