@@ -11,6 +11,10 @@ workspace "KrazyCatEngine"
 
     outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+    filter "system:macosx"
+        architecture "ARM64"
+    filter {}
+
 project "KrazyCatEngine"
     location "KrazyCatEngine"
     kind "SharedLib"
@@ -46,6 +50,16 @@ project "KrazyCatEngine"
     {
         "{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"
     }
+
+    filter "system:macosx"
+        kind "StaticLib"
+        cppdialect "C++20"
+        defines "KCE_PLATFORM_MACOS"
+
+    filter "action:xcode4"
+        xcodebuildsettings {
+            HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/spdlog/include"
+        }
 
     filter "configurations:Debug"
         defines "KCE_DEBUG"
@@ -94,6 +108,18 @@ project "Sandbox"
     {
         "KCE_PLATFORM_WINDOWS"
     }
+
+    filter "system:macosx"
+        cppdialect "C++20"
+        defines "KCE_PLATFORM_MACOS"
+
+    filter "action:xcode4"
+        xcodebuildsettings {
+            HEADER_SEARCH_PATHS = {
+                "$(SRCROOT)/../KrazyCatEngine/vendor/spdlog/include",
+                "$(SRCROOT)/../KrazyCatEngine/src"
+            }
+        }
 
     filter "configurations:Debug"
         defines "KCE_DEBUG"

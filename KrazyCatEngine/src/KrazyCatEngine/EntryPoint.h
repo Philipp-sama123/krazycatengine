@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#ifdef KCE_PLATFORM_WINDOWS
+#if defined(KCE_PLATFORM_WINDOWS) || defined(KCE_PLATFORM_MACOS)
 #include "Application.h"
 
 extern KrazyCatEngine::Application* KrazyCatEngine::CreateApplication();

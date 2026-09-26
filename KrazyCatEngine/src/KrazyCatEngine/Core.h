@@ -6,6 +6,8 @@
     #else
         #define KRAZYCATENGINE_API __declspec(dllimport)
     #endif
+#elif defined(KCE_PLATFORM_MACOS)
+    #define KRAZYCATENGINE_API
 #else
-    #error KrazyCatEngine only supports the Windows platform!
+    #error KrazyCatEngine only supports Windows and macOS!
 #endif
